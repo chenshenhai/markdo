@@ -3,6 +3,8 @@ name = "markdo"
 version = "0.0.1"
 authors = ["chenshenhai <cshenhai@gmail.com>"]
 edition = "2018"
+license = "MIT"
+description = "A markdown parser"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
