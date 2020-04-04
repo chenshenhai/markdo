@@ -13,15 +13,16 @@ pub fn inspect_syntax_type(syntax: SyntaxType) -> String {
     }
 }
 
+#[derive(PartialEq, Eq, Clone, Debug)]
 pub struct AST {
-    pub syntax: SyntaxType,
+    pub syntax: String,
     pub content: String
 }
 
 impl AST {
-    fn new(syntax: SyntaxType, content: String) -> Self  {
+    fn new(syntax_type: SyntaxType, content: String) -> Self  {
         AST {
-            syntax: syntax,
+            syntax: inspect_syntax_type(syntax_type),
             content: content,
         }
     }
