@@ -33,6 +33,12 @@ impl AST {
 
 pub fn compile_md_to_ast(md: &str) -> Vec<AST> {
     let ast = vec![];
+    let lines: Vec<&str> = md.lines().collect();
+    let mut i = 0;
+    while i < lines.len() {
+        println!("lines.[i] = {:?}", lines[i]);
+        i += 1;
+    }
     let result = syntax::is::headline(md);
     return ast;
 }
