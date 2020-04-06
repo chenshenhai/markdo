@@ -1,7 +1,8 @@
-use crate::core::ast::compile_md_to_ast;
+use crate::core::ast;
 
 pub fn compile_md_to_html(md: &str) -> String {
-    let asts = compile_md_to_ast(md);
-    println!("asts = {:?}", asts);
-    return "hello ast".to_string();
+    let asts = ast::compile_md_to_ast(md);
+    let html = ast::compile_ast_to_html(&asts);
+    println!("html = {:?}", html);
+    return html;
 }
