@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>markdo</title>
+  </head>
+  <body>
+    <div>hello markdo</div>
+    <script type="module">
+      import init, { parse } from "./pkg/markdo.js";
+      async function main() {
+        await init();
+        const md = `# hello H1\r\n\r\n## hello H2\r\n\r\n### hello H3\r\n\r\n#### hello H4\r\n\r\n##### hello H5\r\n\r\n###### hello H6\r\n\r\n####### hello H7 text\r\n\r\n123# hello`;
+        const html = parse(md);
+        console.log(html);
+      }
+      main();
+    </script>
+  </body>
+</html>
